@@ -57,7 +57,7 @@ export function PersonCard({ person }: PersonCardProps) {
               <div>
                 <h5 className="text-xs font-medium text-green-600">喜欢</h5>
                 <ul className="space-y-1 text-sm text-muted-foreground">
-                  {person.likes.map((like, index) => (
+                  {person.likes.map((like:any, index:any) => (
                     <li key={index} className="flex items-start gap-1">
                       <span className="mt-1 h-1 w-1 rounded-full bg-green-600"></span>
                       <span>{like}</span>
@@ -68,7 +68,7 @@ export function PersonCard({ person }: PersonCardProps) {
               <div>
                 <h5 className="text-xs font-medium text-red-600">不喜欢</h5>
                 <ul className="space-y-1 text-sm text-muted-foreground">
-                  {person.dislikes.map((dislike, index) => (
+                  {person.dislikes.map((dislike:any, index:any) => (
                     <li key={index} className="flex items-start gap-1">
                       <span className="mt-1 h-1 w-1 rounded-full bg-red-600"></span>
                       <span>{dislike}</span>
@@ -81,7 +81,7 @@ export function PersonCard({ person }: PersonCardProps) {
           <div>
             <h4 className="text-sm font-medium">礼物</h4>
             <div className="mt-1 space-y-1 text-sm text-muted-foreground">
-              {person.gifts.map((gift, index) => (
+              {person.gifts.map((gift:any, index:any) => (
                 <div key={index} className="flex items-start gap-1">
                   <span className="mt-1 h-1 w-1 rounded-full bg-muted-foreground"></span>
                   <span>

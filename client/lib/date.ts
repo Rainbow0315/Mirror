@@ -1,9 +1,11 @@
-export function formatDate(date: Date): string {
-  return date.toLocaleDateString("zh-CN", {
-    month: "short",
-    day: "numeric",
-  })
+export function formatDate(date: string | Date): string {
+  const d = typeof date === 'string' ? new Date(date) : date;
+  return d.toLocaleDateString('zh-CN', {
+    month: 'short',
+    day: 'numeric',
+  });
 }
+
 
 export function formatDateTime(date: Date): string {
   return date.toLocaleDateString("zh-CN", {

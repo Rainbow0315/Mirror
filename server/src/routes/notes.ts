@@ -4,7 +4,7 @@ import type { Note, NotePerson, Person } from '@prisma/client'
 
 const router = Router()
 
-// 路径是'/'，但在挂载之后变成/api/notes/
+// 路径是'/'，但在挂载之后会变成/api/notes/
 router.get('/', async (_req: Request, res: Response) => {
   try {
     const notes = await prisma.note.findMany({
